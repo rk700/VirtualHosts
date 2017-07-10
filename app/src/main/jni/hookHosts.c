@@ -23,7 +23,8 @@ typedef struct {
 
 
 // hosts sorted by hostname for binary search
-// credit: https://github.com/racaljk/hosts
+// egrep -v '^(\s*(#|$)|::1)' hosts | sort -k 2 | awk '{print "{\"" $1 "\",\"" $2 "\"},"}' > hosts.sorted
+// hosts credit: https://github.com/racaljk/hosts
 static Host hosts [] = {
         {"157.240.7.35","0-edge-chat.facebook.com"},
         {"157.240.7.35","0-edge-chat.messenger.com"},
